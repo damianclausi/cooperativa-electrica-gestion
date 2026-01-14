@@ -1,246 +1,330 @@
+# Sistema de Gestión Eléctrica - Cooperativa Ugarte
 
-# PPIV - El Quinto Elemento
+<div align="center">
 
-## Descripción del Proyecto
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat-square&logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat-square&logo=node.js&logoColor=white) ![Express](https://img.shields.io/badge/Express-4.x-000000?style=flat-square&logo=express&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-Sistema de gestión para la Cooperativa Eléctrica "Gobernador Ugarte" desarrollado como proyecto final de la tecnicatura. Este sistema cuenta con tres perfiles de usuario: Cliente, Operario y Administrativo, cada uno con funcionalidades específicas para la gestión de servicios eléctricos, facturación, reclamos y operaciones técnicas.
+**Sistema integral de gestión para cooperativas eléctricas**  
+*Gestión de socios · Facturación de deudas · Panel de reclamos*
 
-## Testing
+[Ver Demo](#) · [Documentación](./docs) · [Reportar Bug](#)
 
-El proyecto cuenta con una suite completa de tests implementada:
+</div>
 
-- **Backend**: ~357 tests (unitarios + integración) con Jest
-- **Frontend**: 56 tests (servicios, hooks, componentes) con Vitest
-- **Total**: ~413 tests pasando 
+---
 
-### Ejecutar Tests
+## Tabla de Contenidos
 
-```bash
-# Todos los tests
-npm run test:all
-./scripts/test-all.sh
+- [Origen y Créditos](#origen-y-créditos)
+- [Diferenciación de Portfolio](#diferenciación-de-portfolio)
+- [Sobre el Proyecto](#sobre-el-proyecto)
+- [Características Principales](#características-principales)
+- [Stack Tecnológico](#stack-tecnológico)
+- [Capturas de Pantalla](#capturas-de-pantalla)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Testing](#testing)
+- [Roadmap](#roadmap)
 
-# Por separado
-npm run test:backend
-npm run test:frontend
+---
 
-# Backend específico
-cd api && npm run test:unit
-cd api && npm run test:integration
+## Origen y Créditos
 
-# Frontend específico
-npm test              # Watch mode
-npm run test:run      # Una vez
-npm run test:ui       # UI visual
-npm run test:coverage # Con cobertura
+> **Este proyecto nació como parte del trabajo final de la cátedra Proyecto Profesional IV (PPIV)** en la Tecnicatura Superior en Desarrollo de Software del IFTS 29.
+
+### Repositorio Original
+
+El código fuente original del proyecto grupal se encuentra en:  
+**[https://github.com/damianclausi/PPIV](https://github.com/damianclausi/PPIV)**
+
+### Equipo Original
+
+Este sistema fue desarrollado por un equipo de estudiantes durante el ciclo académico 2025:
+
+- **Damián Clausi** 
+- **Descosido Cristian**
+- **Gill Cesar Antonio**
+
+### Agradecimientos Especiales
+
+Un agradecimiento especial a todos los integrantes del equipo por su dedicación, creatividad y esfuerzo colaborativo durante el desarrollo inicial. Sin su contribución, este proyecto no hubiera sido posible.
+
+---
+
+## Diferenciación de Portfolio
+
+### ¿Por qué existe este repositorio?
+
+Este repositorio (`cooperativa-electrica-gestion`) es mi **versión personal de portfolio** derivada del proyecto académico original. Fue creado con los siguientes objetivos:
+
+#### Propósito Profesional
+
+- **Nombre descriptivo**: Cambio de `PPIV` (nombre académico) a `cooperativa-electrica-gestion` 
+- **Portfolio profesional**: Diseñado específicamente para ser presentado a reclutadores y empleadores
+- **Demostración de habilidades**: Muestra mi capacidad de mantener, mejorar y desplegar aplicaciones complejas de forma independiente
+
+#### Mejoras Implementadas
+
+En esta versión personal he realizado:
+
+- **Mantenimiento continuo**: Corrección de bugs y optimizaciones de rendimiento
+- **Dashboard mejorado**: Visualizaciones de datos más claras y efectivas
+- **Deployment optimizado**: CI/CD con GitHub Actions
+- **Documentación profesional**: Guías técnicas completas para desarrolladores
+
+
+---
+
+## Sobre el Proyecto
+
+### Sistema de Gestión Eléctrica (SGE)
+
+Este es un **sistema integral de gestión** diseñado para cooperativas eléctricas, específicamente desarrollado para la Cooperativa Eléctrica "Gobernador Ugarte". El sistema digitaliza y optimiza los procesos operativos, administrativos y de atención al cliente de la cooperativa.
+
+### Problema que Resuelve
+
+Las cooperativas eléctricas tradicionalmente manejan sus operaciones con sistemas legacy o procesos manuales. Este SGE moderniza:
+
+- Gestión manual de socios y clientes
+- Facturación y control de deudas en papel
+- Registro de reclamos disperso
+- Asignación ineficiente de órdenes de trabajo a operarios
+- Falta de métricas y reportes en tiempo real
+
+### Solución Implementada
+
+Un sistema web completo con **tres perfiles de usuario integrados**:
+
+1. **Cliente/Socio**: Gestión de servicios personales
+2. **Operario**: Panel de trabajo y reclamos asignados
+3. **Administrativo**: Vista global y gestión integral
+
+---
+
+## Características Principales
+
+### Módulo de Clientes
+
+- Dashboard personalizado con resumen de servicios
+- Visualización de facturas y estado de deudas
+- Creación y seguimiento de reclamos en tiempo real
+- Historial completo de consumos
+
+### Módulo de Operarios
+
+- Panel de órdenes de trabajo asignadas
+- Gestión de reclamos por estado (Pendiente, En Proceso, Resuelto)
+- Carga de insumos utilizados
+- Métricas de productividad personal
+
+### Módulo Administrativo
+
+- Dashboard ejecutivo con KPIs del sistema
+- ABM completo de socios/clientes
+- Gestión integral de reclamos del sistema
+- Administración de empleados y operarios
+- Planificación de itinerarios de relevamiento
+- Reportes y estadísticas detalladas
+- Facturación masiva y control de deudas
+
+### Características Técnicas Destacadas
+
+- **Autenticación JWT** con bcrypt para seguridad
+- **Componentes Radix UI** con accesibilidad completa
+- **Diseño 100% responsive** (desktop, tablet, mobile)
+- **Preparado para modo oscuro** (Next Themes)
+- **Visualizaciones dinámicas** con Recharts
+- **Dockerizado** para desarrollo y producción
+- **413+ tests automatizados** (Jest, Vitest, Supertest)
+- **API RESTful** con Express y arquitectura MVC
+
+---
+
+## Stack Tecnológico
+
+### Frontend
+
+```yaml
+Core:
+  - React 18.3.1 con TypeScript
+  - Vite 6.3.5 (Build tool + React SWC)
+
+UI Framework:
+  - Tailwind CSS v4.1.3
+  - Shadcn/ui + Radix UI (componentes accesibles)
+  - Lucide React 0.487.0 (iconografía)
+
+Librerías:
+  - React Hook Form 7.55.0 (formularios)
+  - Recharts 2.15.2 (gráficos)
+  - Sonner 2.0.3 (notificaciones)
+  - Next Themes 0.4.6 (temas)
 ```
 
-Para más información, consulta la [documentación completa de testing](./docs/TESTING.md).
+### Backend
 
-El proyecto está basado en prototipos de Figma que incluyen:
-- **Cliente**: Login, dashboard, gestión de facturas, reclamos y pagos
-- **Operario**: Gestión de órdenes asignadas, seguimiento de reclamos y carga de insumos
-- **Administrativo**: Planificación de itinerarios, ABM de clientes y métricas del sistema
+```yaml
+Core:
+  - Node.js 18+
+  - Express 4.x
+  - TypeScript
 
-## Tecnologías Utilizadas
+Base de Datos:
+  - PostgreSQL 14+
+  - Docker (contenedor local)
 
-### Core Framework
-- **React 18.3.1** - Librería principal para la interfaz de usuario
-- **TypeScript** - Tipado estático para JavaScript
-- **Vite 6.3.5** - Build tool y desarrollo con React SWC
+Autenticación:
+  - JWT (jsonwebtoken)
+  - bcrypt (hashing de contraseñas)
 
-### UI Framework y Componentes
-- **Radix UI** - Sistema completo de componentes accesibles:
-  - Accordion, Alert Dialog, Avatar, Calendar, Card
-  - Checkbox, Dialog, Dropdown Menu, Form, Input
-  - Navigation Menu, Popover, Progress, Select
-  - Tabs, Tooltip, y más componentes primitivos
-- **Tailwind CSS v4.1.3** - Framework de CSS utilitario
-- **Shadcn/ui** - Componentes pre-construidos basados en Radix UI
+Testing:
+  - Jest (tests unitarios e integración)
+  - Supertest (tests de API)
+```
 
-### Librerías de UI Adicionales
-- **Lucide React 0.487.0** - Iconografía
-- **Class Variance Authority 0.7.1** - Gestión de variantes de componentes
-- **clsx & tailwind-merge** - Utilidades para clases CSS
-- **Recharts 2.15.2** - Gráficos y visualización de datos (variables CSS preparadas)
-- **Sonner 2.0.3** - Sistema de notificaciones toast
+### Arquitectura
 
-### Funcionalidades Especializadas
-- **Next Themes 0.4.6** - Preparado para gestión de temas (modo oscuro/claro)
+```
+Proyecto
+├── Frontend (React + Vite)
+│   ├── src/components/ui/          # Componentes reutilizables
+│   ├── src/components/cliente/     # Módulo de clientes
+│   ├── src/components/operario/    # Módulo de operarios
+│   └── src/components/admin/       # Módulo administrativo
+│
+├── Backend (Express + PostgreSQL)
+│   ├── api/_lib/models/            # Modelos de datos
+│   ├── api/_lib/controllers/       # Lógica de negocio
+│   ├── api/_lib/routes/            # Definición de rutas
+│   └── api/_lib/middleware/        # Autenticación y validación
+│
+└── Documentación
+    ├── docs/API.md                 # Documentación de endpoints
+    ├── docs/DATABASE.md            # Esquema de base de datos
+    └── docs/TESTING.md             # Guía de testing
+```
 
-### Componentes UI Disponibles (no utilizados en App principal)
-- **React Hook Form 7.55.0** - Gestión de formularios
-- **React Day Picker 8.10.1** - Selector de fechas
-- **Input OTP 1.4.2** - Campos de entrada para códigos OTP
-- **CMDK 1.1.1** - Command palette y búsqueda
-- **Embla Carousel React 8.6.0** - Componente de carrusel
-- **React Resizable Panels 2.1.7** - Paneles redimensionables
-- **Vaul 1.1.2** - Drawer/modal components
+---
 
-### Herramientas de Desarrollo
-- **@vitejs/plugin-react-swc** - Plugin de Vite con SWC para mejor performance
-- **@types/node** - Tipos de TypeScript para Node.js
+## Capturas de Pantalla
 
-## Estructura del Proyecto
+### Dashboard de Cliente
+![Dashboard Cliente](./docs/screenshots/dashboard-cliente.png)
+*Vista principal del cliente con resumen de servicios y reclamos activos*
 
-- `src/components/ui/` - Componentes de interfaz reutilizables
-- `src/components/admin/` - Componentes del dashboard administrativo
-- `src/components/cliente/` - Componentes del dashboard de clientes
-- `src/components/operario/` - Componentes del dashboard de operarios
-- `src/styles/` - Estilos globales y configuración de CSS
-- `src/guidelines/` - Documentación y guidelines del proyecto
-- `api/` - API REST con Express y PostgreSQL (arquitectura MVC)
-  - `api/_lib/models/` - Modelos de datos
-  - `api/_lib/controllers/` - Lógica de negocio
-  - `api/_lib/routes/` - Definición de rutas
-  - `api/_lib/middleware/` - Middlewares (auth, validación)
-  - `api/_lib/utils/` - Utilidades compartidas
-- `docs/` - Documentación técnica del proyecto
+### Panel de Operario
+![Panel Operario](./docs/screenshots/panel-operario.png)
+*Gestión de órdenes de trabajo y reclamos asignados*
 
-## Instalación y Ejecución
+### Dashboard Administrativo
+![Dashboard Admin](./docs/screenshots/dashboard-admin.png)
+*Vista ejecutiva con métricas del sistema y gestión integral*
+
+### Gestión de Reclamos
+![Reclamos](./docs/screenshots/gestion-reclamos.png)
+*Sistema de seguimiento de reclamos en tiempo real*
+
+> **Nota**: Las capturas de pantalla se irán actualizando conforme evolucione el diseño.
+
+---
+
+## Instalación
 
 ### Requisitos Previos
 
-- **Node.js** 18+ y npm
-- **Docker** (para PostgreSQL)
-  - Si no tienes Docker: https://docs.docker.com/engine/install/
+Antes de comenzar, asegurate de tener instalado:
 
-### Primera Vez - Setup Completo
+- **Node.js** 18+ y npm ([Descargar](https://nodejs.org/))
+- **Docker** y Docker Compose ([Descargar](https://docs.docker.com/engine/install/))
+- **Git** ([Descargar](https://git-scm.com/))
 
-#### 1. Clonar el Repositorio
+### Clonar el Repositorio
+
 ```bash
-git clone https://github.com/damianclausi/PPIV.git
-cd PPIV
-git checkout integracion-base-datos
+git clone https://github.com/damianclausi/cooperativa-electrica-gestion.git
+cd cooperativa-electrica-gestion
 ```
 
-#### 2. Instalar Dependencias
+### Instalar Dependencias
+
 ```bash
-# Dependencias del frontend
+# Frontend
 npm install
 
-# Dependencias del backend
+# Backend
 cd api
 npm install
 cd ..
 ```
 
-#### 3. Configurar Variables de Entorno
+### Configurar Variables de Entorno
 
-**Backend** - Crear `api/.env`:
-```bash
+#### Backend - Crear `api/.env`
+
+```env
 PORT=3001
-DATABASE_URL=postgresql://DB_USER:DB_PASSWORD@localhost:5432/DB_NAME
-JWT_SECRET=tu-secreto-jwt-super-seguro-aqui
+DATABASE_URL=postgresql://coop_user:cooperativa2024@localhost:5432/cooperativa_ugarte_db
+JWT_SECRET=tu-secreto-jwt-super-seguro-cambiar-en-produccion
 NODE_ENV=development
 ```
 
-**Nota:** Reemplaza `DB_USER`, `DB_PASSWORD` y `DB_NAME` con las credenciales de tu base de datos.
-Para desarrollo local usando Docker Hub, usa:
-- DB_USER: `coop_user`
-- DB_PASSWORD: `cooperativa2024`
-- DB_NAME: `cooperativa_ugarte_db`
+#### Frontend - Crear `.env`
 
-**Frontend** - Crear `.env`:
-```bash
+```env
 VITE_API_URL=http://localhost:3001
 VITE_APP_NAME=Sistema de Gestión - Cooperativa Eléctrica
 ```
 
-#### 4. Iniciar Base de Datos con Docker
+### Iniciar Base de Datos
 
-**Opción A: Usando el script automatizado (Recomendado)**
 ```bash
+# Opción A: Script automatizado (Recomendado)
 ./update-docker.sh
+
+# Opción B: Docker Compose
+docker-compose up -d
 ```
 
-Este script:
-- Descarga la imagen `damian2k/cooperativa-ugarte-db:latest` desde Docker Hub
-- Crea y ejecuta el contenedor PostgreSQL con datos precargados
-- Verifica la conectividad automáticamente
-- Muestra la cantidad de registros cargados (30 reclamos, 6 clientes, 5 empleados, etc.)
+El script descarga una imagen PostgreSQL preconfigurada con:
+- 6 clientes de prueba
+- 5 empleados (3 operarios + 2 administradores)
+- 30 reclamos de ejemplo
+- 23 órdenes de trabajo
+- Esquema completo de base de datos
 
-**Opción B: Manual**
-```bash
-docker run -d \
-  --name cooperativa-db \
-  -p 5432:5432 \
-  -e POSTGRES_DB=cooperativa_ugarte_db \
-  -e POSTGRES_USER=coop_user \
-  -e POSTGRES_PASSWORD=<tu-password-aqui> \
-  damian2k/cooperativa-ugarte-db:latest
-```
+### Iniciar el Sistema
 
-#### 5. Iniciar el Sistema
 ```bash
+# Iniciar todo (backend + frontend)
 ./start.sh
-```
 
-Este script inicia automáticamente:
-- Backend API (puerto 3001)
-- Frontend React (puerto 3002)
-
-#### 6. Verificar que Todo Funcione
-```bash
+# Verificar estado
 ./status.sh
 ```
 
 Deberías ver:
 ```
-Backend: CORRIENDO puerto 3001
-Frontend: CORRIENDO puerto 3002
-PostgreSQL: CORRIENDO contenedor cooperativa-db
-Sistema: completamente operativo
+✅ Backend:    CORRIENDO en puerto 3001
+✅ Frontend:   CORRIENDO en puerto 3002
+✅ PostgreSQL: CORRIENDO (contenedor cooperativa-db)
+🎉 Sistema completamente operativo
 ```
 
-### Inicio Rápido (Sistema Ya Configurado)
+### Acceder al Sistema
 
-```bash
-# Iniciar todo
-./start.sh
+- **Frontend**: [http://localhost:3002](http://localhost:3002)
+- **Backend API**: [http://localhost:3001](http://localhost:3001)
+- **PostgreSQL**: `localhost:5432`
 
-# Ver estado
-./status.sh
+---
 
-# Ver logs
-./logs.sh all
+## Uso
 
-# Detener todo
-./stop.sh
+### Usuarios de Prueba
 
-# Reiniciar (útil después de cambios)
-./restart.sh
-```
+El sistema incluye **11 usuarios preconfigurados** para testing:
 
-### Scripts Disponibles
-
-| Script | Descripción |
-|--------|-------------|
-| `./start.sh` | Inicia backend y frontend |
-| `./stop.sh` | Detiene todos los servicios |
-| `./restart.sh` | Reinicia el sistema |
-| `./status.sh` | Muestra estado del sistema |
-| `./logs.sh` | Ver logs (backend\|frontend\|all\|errors) |
-| `./update-docker.sh` | Actualiza imagen Docker desde Docker Hub |
-
-Ver **README_SCRIPTS.md** para documentación completa de scripts.
-
-### Acceso al Sistema
-
-Una vez iniciado:
-
-- **Frontend**: http://localhost:3002
-- **Backend API**: http://localhost:3001
-- **PostgreSQL**: localhost:5432
-  - Usuario: `coop_user`
-  - Base de datos: `cooperativa_ugarte_db`
-  - Contraseña: Ver archivo `.env` o imagen Docker
-
-## Usuarios de Prueba
-
-El sistema incluye **11 usuarios pre-configurados** con diferentes roles:
-
-### Clientes (6 usuarios)
+#### Clientes (6 usuarios)
 
 | Email | Nombre | Password |
 |-------|--------|----------|
@@ -251,235 +335,142 @@ El sistema incluye **11 usuarios pre-configurados** con diferentes roles:
 | `silviaraquel.rodriguez@gmail.com` | Silvia Raquel Rodríguez | `password123` |
 | `carlosalberto.sanchez@hotmail.com` | Carlos Alberto Sánchez | `password123` |
 
-**Funcionalidades del Cliente:**
-- Ver mis reclamos
-- Crear nuevos reclamos
-- Dashboard con estadísticas personales
-- Cerrar sesión
+#### Operarios (3 usuarios)
 
-### Operarios (3 usuarios)
+| Email | Nombre | Password |
+|-------|--------|----------|
+| `pedro.electricista@cooperativa-ugarte.com.ar` | Pedro Ramón García | `password123` |
+| `juan.operario@cooperativa-ugarte.com.ar` | Juan Carlos Pérez | `password123` |
+| `luis.tecnico@cooperativa-ugarte.com.ar` | Luis Alberto Gómez | `password123` |
 
-| Email | Nombre | Cargo | Password |
-|-------|--------|-------|----------|
-| `pedro.electricista@cooperativa-ugarte.com.ar` | Pedro Ramón García | Técnico Electricista | `password123` |
-| `juan.operario@cooperativa-ugarte.com.ar` | Juan Carlos Pérez | Operario de Campo | `password123` |
-| `luis.tecnico@cooperativa-ugarte.com.ar` | Luis Alberto Gómez | Técnico Especializado | `password123` |
+#### Administradores (2 usuarios)
 
-**Funcionalidades del Operario:**
-- Ver reclamos asignados
-- Estadísticas de trabajo (pendientes, en proceso, resueltos)
-- Filtrar reclamos por estado
-- Dashboard con métricas operativas
-- Cerrar sesión
+| Email | Nombre | Password |
+|-------|--------|----------|
+| `monica.administradora@cooperativa-ugarte.com.ar` | Mónica Administradora | `password123` |
+| `carlos.admin@cooperativa-ugarte.com.ar` | Carlos Alberto Admin | `password123` |
 
-### Administradores (2 usuarios)
+### Scripts de Gestión
 
-| Email | Nombre | Cargo | Password |
-|-------|--------|-------|----------|
-| `monica.administradora@cooperativa-ugarte.com.ar` | Mónica Administradora | Gerente Administrativa | `password123` |
-| `carlos.admin@cooperativa-ugarte.com.ar` | Carlos Alberto Admin | Director General | `password123` |
+| Script | Descripción |
+|--------|-------------|
+| `./start.sh` | Inicia backend y frontend |
+| `./stop.sh` | Detiene todos los servicios |
+| `./restart.sh` | Reinicia el sistema completo |
+| `./status.sh` | Muestra estado del sistema |
+| `./logs.sh` | Ver logs (backend\|frontend\|all\|errors) |
+| `./update-docker.sh` | Actualiza imagen Docker desde Docker Hub |
 
-**Funcionalidades del Administrador:**
-- Vista completa del sistema con pestañas:
-  - **Dashboard**: Estadísticas generales
-  - **Socios**: Lista completa de clientes
-  - **Reclamos**: Todos los reclamos del sistema
-  - **Empleados**: Lista de operarios
-- Métricas y reportes del sistema
-- Cerrar sesión
+### Ver Logs
+
+```bash
+# Todos los logs en tiempo real
+./logs.sh all
+
+# Solo backend
+./logs.sh backend
+
+# Solo frontend
+./logs.sh frontend
+
+# Solo errores
+./logs.sh errors
+```
+
+---
 
 ## Testing
 
-El sistema utiliza **pruebas manuales** y validación en desarrollo local antes del deployment.
-
-### Ejemplo de Uso Manual (Testing de API)
+El proyecto cuenta con una **suite completa de 413+ tests** automatizados:
 
 ```bash
-# Login como cliente
-curl -X POST http://localhost:3001/api/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"mariaelena.gonzalez@hotmail.com","password":"<ver-tabla-usuarios>"}'
+# Ejecutar todos los tests
+npm run test:all
 
-# Obtener perfil (con token)
-curl http://localhost:3001/api/clientes/perfil \
-  -H "Authorization: Bearer TU_TOKEN_AQUI"
+# Tests del backend (Jest)
+npm run test:backend
+
+# Tests del frontend (Vitest)
+npm run test:frontend
+
+# Tests con cobertura
+npm run test:coverage
+
+# Tests en modo watch
+npm test
 ```
 
-## Base de Datos
+### Cobertura de Tests
 
-El sistema utiliza **PostgreSQL** con las siguientes tablas principales:
+- **Backend**: ~357 tests (unitarios + integración)
+- **Frontend**: 56 tests (servicios, hooks, componentes)
+- **Total**: 413+ tests pasando
 
-- `socio` - Información de clientes
-- `empleado` - Información de operarios y administradores
-- `reclamo` - Reclamos del sistema
-- `tipo_reclamo` - Catálogo de tipos de reclamo
-- `estado_reclamo` - Estados posibles de los reclamos
+Ver la [documentación completa de testing](./docs/TESTING.md) para más detalles.
 
-### Datos Pre-cargados
+---
 
-La imagen Docker incluye:
-- **6 clientes** (socios con cuentas activas)
-- **5 empleados** (3 operarios + 2 administradores)
-- **30 reclamos** de ejemplo asignados a operarios
-- **8 tipos de reclamo** (Falta de Suministro, Fluctuaciones de Tensión, Daños en Red, Medidor Defectuoso, Facturación, Conexión Nueva, Reconexión, Calidad del Servicio)
-- **11 usuarios** configurados (6 clientes + 3 operarios + 2 admins)
-- **23 órdenes de trabajo** asignadas al operario Pedro García
+## Roadmap
 
-### Actualizar Base de Datos
+### Completado (v1.0 - Production Ready)
 
-Si se actualiza la imagen en Docker Hub con nuevos datos:
+- Sistema de autenticación multi-perfil
+- CRUD completo de socios/clientes
+- Gestión de reclamos con asignación
+- Dashboard administrativo con KPIs
+- Exportación de reportes PDF
+- Módulo de operarios funcional
+- API RESTful documentada
+- Suite de tests completa (413+)
+- Dockerización de base de datos
+- Deployment en Vercel
+- Documentación técnica
 
-```bash
-./stop.sh
-./update-docker.sh
-./start.sh
-```
+### En Desarrollo (v1.1)
 
-## Ramas del Proyecto
+- Sistema de notificaciones push
+- Notificaciones de cortes programados
+- Toma de estados de medidores en campo
 
-- **`main`**: Rama principal con la interfaz de usuario base
-- **`integracion-base-datos`**: **Rama activa** con integración completa:
-  - Base de datos PostgreSQL en Docker
-  - Backend API REST con Express
-  - Autenticación JWT
-  - 3 roles de usuario funcionando
-  - Testing completo
-  - Imagen Docker: `damian2k/cooperativa-ugarte-db:latest`
+### Futuro (v2.0)
 
-## Características del Sistema
+- Integración con pasarelas de pago
+- Dashboard con gráficos en tiempo real
+- Sistema de geolocalización de operarios
+- Chat en tiempo real (operario-cliente)
+- API pública para integraciones
 
-### Funcionalidades por Rol
+---
 
-#### Cliente
-- Dashboard personalizado con mis reclamos
-- Crear nuevos reclamos
-- Estadísticas de mis servicios
-- Filtrar y buscar reclamos propios
+## Contribuciones
 
-#### Operario
-- Dashboard con reclamos asignados
-- Estadísticas de trabajo (pendientes, en proceso, resueltos)
-- Filtros por estado de reclamo
-- Métricas operativas en tiempo real
+Este es un proyecto de portfolio personal, pero las sugerencias y feedback son bienvenidos:
 
-#### Administrador
-- Vista global del sistema con pestañas
-- Gestión completa de socios
-- Supervisión de todos los reclamos
-- Administración de empleados
-- Dashboard con métricas generales
+1. Fork el proyecto
+2. Crea tu feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push al branch (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-### Características Técnicas
+---
 
-- **Multi-perfil**: Interfaz adaptada para Cliente, Operario y Administrativo
-- **Autenticación JWT**: Sistema seguro de tokens con bcrypt
-- **API RESTful**: Backend Express con validaciones
-- **Diseño Responsive**: Componentes optimizados para desktop y mobile
-- **Accesibilidad**: Componentes Radix UI con soporte completo de accesibilidad
-- **Base de Datos**: PostgreSQL con Docker
-- **Testing**: 32 tests automatizados con Jest y Supertest
-- **Componentes Reutilizables**: Biblioteca completa de componentes UI
-- **Gestión de Estado**: React hooks para manejo de estado local
-- **Dockerizado**: PostgreSQL en contenedor para desarrollo
+## Contacto
 
-## Logs y Monitoreo
+**Damián Clausi**
 
-```bash
-# Ver logs en tiempo real
-./logs.sh all
+- LinkedIn: [linkedin.com/in/damianclausi](https://linkedin.com/in/damianclausi)
+- Email: damian.clausi@example.com
+- GitHub: [@damianclausi](https://github.com/damianclausi)
+- Portfolio: [damianclausi.dev](https://damianclausi.dev)
 
-# Ver solo logs del backend
-./logs.sh backend
+---
 
-# Ver solo logs del frontend
-./logs.sh frontend
+## Enlaces Relevantes
 
-# Ver solo errores
-./logs.sh errors
+- **Repositorio Original (Grupal)**: [github.com/damianclausi/PPIV](https://github.com/damianclausi/PPIV)
+- **Demo en Vivo**: [cooperativa-gestion.vercel.app](#)
+- **Documentación API**: [docs/API.md](./docs/API.md)
+- **Guía de Base de Datos**: [docs/DATABASE.md](./docs/DATABASE.md)
+- **Guía de Testing**: [docs/TESTING.md](./docs/TESTING.md)
 
-# O manualmente:
-tail -f logs/backend.log
-tail -f logs/frontend.log
-
-# Ver logs de PostgreSQL
-docker logs cooperativa-db -f
-```
-
-## Troubleshooting
-
-### El sistema no inicia
-
-```bash
-# Verificar estado del sistema
-./status.sh
-
-# Verificar que Docker esté corriendo
-docker ps
-
-# Verificar puertos disponibles
-lsof -i :3002  # Frontend
-lsof -i :3001  # Backend
-lsof -i :5432  # PostgreSQL
-
-# Reiniciar todo
-./restart.sh
-```
-
-### Error de autenticación
-
-Verificá que:
-- El backend esté corriendo en puerto 3001
-- La base de datos esté levantada
-- Estés usando uno de los usuarios de prueba listados arriba
-- La contraseña sea exactamente `password123`
-
-### Base de datos no conecta
-
-```bash
-# Reiniciar PostgreSQL
-docker-compose down
-docker-compose up -d
-
-# Verificar estado
-docker ps | grep cooperativa-db
-```
-
-## Deployment
-
-### Vercel (Producción)
-
-El sistema está desplegado en Vercel con:
-- **Frontend**: Desplegado automáticamente desde la rama `main`
-- **Backend**: Funciones serverless en `/api` (sin duplicación de código)
-- **Base de Datos**: PostgreSQL externa (configurada vía variables de entorno)
-
-**Arquitectura Unificada:**
-- Un solo directorio `/api` funciona tanto para desarrollo local como producción
-- MVC preservado: models, controllers, routes en `api/_lib/`
-- Sin necesidad de sincronización manual entre carpetas
-
-### Variables de Entorno en Vercel
-
-Backend (Serverless Functions):
-- `DATABASE_URL`
-- `JWT_SECRET`
-- `NODE_ENV=production`
-
-Frontend:
-- `VITE_API_URL` (URL de tu API en Vercel)
-
-### Frontend
-
-```bash
-# Build para producción
-npm run build
-
-# Previsualizar build
-npm run preview
-```
-
-## Documentación Adicional
-
-- [API Documentation](docs/API.md) - Documentación completa de endpoints
-- [Database Schema](docs/DATABASE.md) - Esquema completo de la base de datos
-- [Testing Guide](docs/TESTING.md) - Guía completa de testing
+---
