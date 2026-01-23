@@ -140,6 +140,45 @@ Ejemplo: `feat: agregar validación de email en formulario de registro`
 
 ---
 
+## Estrategia de Merge: Squash and Merge ✅
+
+Al hacer merge de Pull Requests en GitHub, **siempre usar "Squash and merge"**:
+
+### ¿Por qué Squash?
+
+| Beneficio | Descripción |
+|-----------|-------------|
+| **Historial limpio** | Todos los commits de la feature se combinan en uno solo |
+| **Fácil de revertir** | Si algo falla, revertir 1 commit es más simple |
+| **Cada commit es desplegable** | Cada commit en `main` representa una feature completa |
+| **Menos ruido** | Los commits intermedios ("wip", "fix typo") no ensucian main |
+
+### Cómo hacerlo en GitHub
+
+1. Cuando el PR esté listo para merge, hacer click en la flecha del botón "Merge"
+2. Seleccionar **"Squash and merge"** en lugar de "Create a merge commit"
+3. Editar el mensaje del commit si es necesario (GitHub propone uno basado en el título del PR)
+4. Confirmar el merge
+
+### Ejemplo de historial con Squash
+
+```
+4d2f623 feat: simplificar login eliminando usuarios de prueba (#27)
+07d6ca5 docs: agregar workflow de Trunk-Based Development
+3610fe5 update readme, version portfolio
+```
+
+En lugar de:
+```
+4d2f623 Merge pull request #27 from feature/login-simplificado
+ec1d37a fix: typo
+ab12345 wip: working
+cd67890 feat: simplificar login
+07d6ca5 docs: agregar workflow de Trunk-Based Development
+```
+
+---
+
 ## Comandos Útiles
 
 // turbo
