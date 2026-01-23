@@ -49,12 +49,12 @@ export default function Login() {
     } catch (err) {
       // Extraer el mensaje de error más específico
       const mensajeError = err.message || err.details?.mensaje || err.details?.error || 'Error al iniciar sesión';
-      
+
       // Guardar en localStorage inmediatamente
       localStorage.setItem('loginError', mensajeError);
       setError(mensajeError);
       setMostrarError(true);
-      
+
       // Prevenir cualquier navegación
       e.stopPropagation();
     } finally {
@@ -78,9 +78,8 @@ export default function Login() {
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">
           Cooperativa Eléctrica
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-white/90">
-          Gobernador Ugarte
-        </p>
+
+
       </div>
 
       {/* Card de Login */}
@@ -118,7 +117,7 @@ export default function Login() {
               </Alert>
             </div>
           )}
-          
+
           <form onSubmit={handleSubmit} className="space-y-4">
 
             <div className="space-y-2">
@@ -169,64 +168,6 @@ export default function Login() {
                 'Iniciar Sesión'
               )}
             </Button>
-
-            {/* Usuarios de Prueba */}
-            <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-200">
-              <p className="text-xs sm:text-sm font-semibold text-cooperativa-dark mb-2 sm:mb-3 text-center">
-                Usuarios de Prueba (contraseña: password123)
-              </p>
-              
-              <div className="space-y-1.5 sm:space-y-2">
-                {/* Cliente */}
-                <div className="bg-cooperativa-teal/10 border border-cooperativa-teal/30 rounded-lg p-2 sm:p-3 hover:shadow-md transition-shadow">
-                  <p className="text-xs font-bold text-cooperativa-teal mb-1 sm:mb-1.5">👤 CLIENTE</p>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setEmail('mariaelena.gonzalez@hotmail.com');
-                      setPassword('password123');
-                    }}
-                    className="text-[10px] sm:text-xs text-cooperativa-dark hover:text-cooperativa-blue font-mono break-all text-left w-full transition-colors"
-                  >
-                    mariaelena.gonzalez@hotmail.com
-                  </button>
-                </div>
-
-                {/* Operario */}
-                <div className="bg-cooperativa-blue/10 border border-cooperativa-blue/30 rounded-lg p-2 sm:p-3 hover:shadow-md transition-shadow">
-                  <p className="text-xs font-bold text-cooperativa-blue mb-1 sm:mb-1.5">🔧 OPERARIO</p>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setEmail('pedro.electricista@cooperativa-ugarte.com.ar');
-                      setPassword('password123');
-                    }}
-                    className="text-[10px] sm:text-xs text-cooperativa-dark hover:text-cooperativa-blue font-mono break-all text-left w-full transition-colors"
-                  >
-                    pedro.electricista@cooperativa-ugarte.com.ar
-                  </button>
-                </div>
-
-                {/* Administrador */}
-                <div className="bg-cooperativa-cyan/10 border border-cooperativa-cyan/30 rounded-lg p-2 sm:p-3 hover:shadow-md transition-shadow">
-                  <p className="text-xs font-bold text-cooperativa-cyan mb-1 sm:mb-1.5">⚡ ADMINISTRADOR</p>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setEmail('monica.administradora@cooperativa-ugarte.com.ar');
-                      setPassword('password123');
-                    }}
-                    className="text-[10px] sm:text-xs text-cooperativa-dark hover:text-cooperativa-cyan font-mono break-all text-left w-full transition-colors"
-                  >
-                    monica.administradora@cooperativa-ugarte.com.ar
-                  </button>
-                </div>
-              </div>
-
-              <p className="text-[10px] sm:text-xs text-gray-500 mt-2 sm:mt-3 text-center">
-                💡 Click en el email para autocompletar
-              </p>
-            </div>
           </form>
         </CardContent>
       </Card>
