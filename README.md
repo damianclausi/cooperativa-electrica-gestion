@@ -460,7 +460,6 @@ Este es un proyecto de portfolio personal, pero las sugerencias y feedback son b
 
 - LinkedIn: [linkedin.com/in/damianclausi](https://linkedin.com/in/damianclausi)
 - GitHub: [@damianclausi](https://github.com/damianclausi)
-- Portfolio: [damianclausi.dev](https://damianclausi.dev)
 
 ---
 
