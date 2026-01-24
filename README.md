@@ -459,7 +459,6 @@ Este es un proyecto de portfolio personal, pero las sugerencias y feedback son b
 **Damián Clausi**
 
 - LinkedIn: [linkedin.com/in/damianclausi](https://linkedin.com/in/damianclausi)
-- Email: damian.clausi@example.com
 - GitHub: [@damianclausi](https://github.com/damianclausi)
 - Portfolio: [damianclausi.dev](https://damianclausi.dev)
 
