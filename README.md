@@ -7,7 +7,7 @@
 **Sistema integral de gestión para cooperativas eléctricas**  
 *Gestión de socios · Facturación de deudas · Panel de reclamos*
 
-[Ver Demo](#) · [Documentación](./docs) · [Reportar Bug](#)
+[Ver Demo](https://cooperativa-electrica-gestion.vercel.app/) · [Documentación](./docs)
 
 </div>
 
