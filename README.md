@@ -209,19 +209,19 @@ Proyecto
 ## Capturas de Pantalla
 
 ### Dashboard de Cliente
-![Dashboard Cliente](./docs/screenshots/dashboard-cliente.png)
+![Dashboard Cliente](./assets/ui-client-dashboard-main.png)
 *Vista principal del cliente con resumen de servicios y reclamos activos*
 
 ### Panel de Operario
-![Panel Operario](./docs/screenshots/panel-operario.png)
+![Panel Operario](./assets/ui-operator-dashboard-main.png)
 *Gestión de órdenes de trabajo y reclamos asignados*
 
 ### Dashboard Administrativo
-![Dashboard Admin](./docs/screenshots/dashboard-admin.png)
+![Dashboard Admin](./assets/ui-admin-dashboard-main.png)
 *Vista ejecutiva con métricas del sistema y gestión integral*
 
 ### Gestión de Reclamos
-![Reclamos](./docs/screenshots/gestion-reclamos.png)
+![Reclamos](./assets/ui-admin-dashboard-ticket-management.png)
 *Sistema de seguimiento de reclamos en tiempo real*
 
 > **Nota**: Las capturas de pantalla se irán actualizando conforme evolucione el diseño.
