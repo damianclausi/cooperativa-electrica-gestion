@@ -410,6 +410,21 @@ Ver la [documentación completa de testing](./docs/TESTING.md) para más detalle
 
 ---
 
+## Deployment
+
+### Infraestructura de Producción
+
+En el entorno de producción, la arquitectura se optimiza para escalabilidad y rendimiento:
+
+- **Base de Datos**: Se utiliza **Supabase** (PostgreSQL).
+- **Gestión de Conexiones**: Se implementa el **Connection Pooler de Supabase** (PgBouncer) en modo transacción.
+  > El uso del Connection Pooler es esencial en esta arquitectura serverless para administrar eficientemente las conexiones TCP hacia la base de datos, previniendo el agotamiento de conexiones y mejorando la latencia en situaciones de alta concurrencia.
+
+> [!IMPORTANT]
+> Ver el [Anexo de Configuración de Conexión](./docs/ANEXO_CONEXION_SUPABASE.md) para resolver problemas de conectividad IPv6 en Vercel.
+
+---
+
 ## Roadmap
 
 ### Completado (v1.0 - Production Ready)
@@ -468,6 +483,8 @@ Este es un proyecto de portfolio personal, pero las sugerencias y feedback son b
 - **Repositorio Original (Grupal)**: [github.com/damianclausi/PPIV](https://github.com/damianclausi/PPIV)
 - **Demo en Vivo**: [cooperativa-gestion.vercel.app](#)
 - **Documentación API**: [docs/API.md](./docs/API.md)
+- **Guía de Deployment (Vercel)**: [docs/DEPLOYMENT_VERCEL.md](./docs/DEPLOYMENT_VERCEL.md)
+- **Anexo: Conexión Supabase**: [docs/ANEXO_CONEXION_SUPABASE.md](./docs/ANEXO_CONEXION_SUPABASE.md)
 - **Guía de Base de Datos**: [docs/DATABASE.md](./docs/DATABASE.md)
 - **Guía de Testing**: [docs/TESTING.md](./docs/TESTING.md)
 

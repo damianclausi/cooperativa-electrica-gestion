@@ -805,6 +805,12 @@ vercel rollback [deployment-url]
 
 ---
 
+## 📑 Anexos
+
+- [Anexo: Configuración Crítica de Conexión (Vercel - Supabase)](./ANEXO_CONEXION_SUPABASE.md) - **Obligatorio para nuevos deploys** (Solución a problemas ENOTFOUND e IPv6).
+
+---
+
 ## 👥 Créditos
 
 **Proyecto:** PPIV - Plataforma de Planificación de Inversiones de la Cooperativa Eléctrica Gobernador Ugarte
