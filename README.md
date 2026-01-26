@@ -420,6 +420,13 @@ En el entorno de producción, la arquitectura se optimiza para escalabilidad y r
 - **Gestión de Conexiones**: Se implementa el **Connection Pooler de Supabase** (PgBouncer) en modo transacción.
   > El uso del Connection Pooler es esencial en esta arquitectura serverless para administrar eficientemente las conexiones TCP hacia la base de datos, previniendo el agotamiento de conexiones y mejorando la latencia en situaciones de alta concurrencia.
 
+- **Keep-Alive Cron Job**: Las bases de datos de Supabase Free Tier se pausan tras 7 días de inactividad. Para evitar esto, se implementa un cron job (`api/cron/keep-alive.js`) que ejecuta una consulta `SELECT 1` cada 3 días automáticamente.
+  
+  | Configuración | Valor |
+  |---------------|-------|
+  | Endpoint | `/api/cron/keep-alive` |
+  | Schedule | `0 0 */3 * *` (cada 3 días a medianoche UTC) |
+
 > [!IMPORTANT]
 > Ver el [Anexo de Configuración de Conexión](./docs/ANEXO_CONEXION_SUPABASE.md) para resolver problemas de conectividad IPv6 en Vercel.
 
