@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         }
 
         // Hacemos una petición GET a la API REST principal de Supabase
-        const response = await fetch(`${supabaseUrl}/rest/v1/`, {
+        const response = await fetch(`${supabaseUrl}/rest/v1/cuenta?limit=1`, {
             method: 'GET',
             headers: {
                 'apikey': supabaseKey,
