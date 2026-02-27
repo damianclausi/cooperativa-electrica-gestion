@@ -1,9 +1,8 @@
-/**
- * Keep-Alive Cron Job for Supabase Free Tier
- * * Supabase pauses inactive databases after 7 days on the Free Tier.
- * This endpoint uses the REST API to guarantee activity registration.
- * * Schedule: "0 0 */3 * *" (Every 3 days at midnight UTC)
- */
+//Keep-Alive Cron Job for Supabase Free Tier
+ //Supabase pauses inactive databases after 7 days on the Free Tier.
+ //This endpoint uses the REST API to guarantee activity registration.
+ //Schedule: "0 0 */3 * *" (Every 3 days at midnight UTC)
+
 export default async function handler(req, res) {
     const startTime = Date.now();
 
